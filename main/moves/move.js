@@ -14,7 +14,9 @@ class Move {
   useMove() {
     if (this.pp.current > 0) {
       this.pp.current -= 1;
+      return true;
     }
+    return false;
   }
 }
 

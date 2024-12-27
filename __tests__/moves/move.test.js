@@ -64,9 +64,9 @@ describe("move class", () => {
       expect(lavePlume.pp.current).toBe(15);
       expect(spore.pp.current).toBe(15);
 
-      earthquake.useMove();
-      lavePlume.useMove();
-      spore.useMove();
+      expect(earthquake.useMove()).toBe(true);
+      expect(lavePlume.useMove()).toBe(true);
+      expect(spore.useMove()).toBe(true);
 
       expect(earthquake.pp.current).toBe(9);
       expect(lavePlume.pp.current).toBe(14);
@@ -78,7 +78,7 @@ describe("move class", () => {
       expect(sketch.pp.current).toBe(1);
       sketch.useMove();
       expect(sketch.pp.current).toBe(0);
-      sketch.useMove();
+      expect(sketch.useMove()).toBe(false);
       expect(sketch.pp.current).toBe(0);
     });
   });
