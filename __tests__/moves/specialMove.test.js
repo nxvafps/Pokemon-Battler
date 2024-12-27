@@ -27,7 +27,7 @@ describe("special move class", () => {
   describe("useMove", () => {
     it("should decrease the pp when invoked", () => {
       expect(zapCannon.pp.current).toBe(5);
-      zapCannon.useMove();
+      expect(zapCannon.useMove()).toBe(true);
       expect(zapCannon.pp.current).toBe(4);
     });
 
