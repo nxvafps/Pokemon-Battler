@@ -24,7 +24,7 @@ describe("physical move class", () => {
   });
 
   describe("useMove", () => {
-    it("should decrease the pp when useMove is invoked", () => {
+    it("should decrease the pp when invoked", () => {
       expect(earthquake.pp.current).toBe(10);
       earthquake.useMove();
       expect(earthquake.pp.current).toBe(9);
@@ -54,6 +54,7 @@ describe("physical move class", () => {
       expect(earthquake.pp.current).toBe(0);
       earthquake.useMove();
       expect(earthquake.pp.current).toBe(0);
+      expect(earthquake.useMove()).toBe(false);
     });
   });
 });
